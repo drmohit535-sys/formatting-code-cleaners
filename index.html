@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional online formatting and code cleaning tools for HTML, CSS, JavaScript, JSON and text. Fast, secure and SEO-friendly.">
+    <meta name="keywords" content="code formatter, html formatter, css formatter, javascript formatter, json formatter, text cleaner, code beautifier">
+    <meta name="author" content="Formatting & Code Cleaners">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Formatting & Code Cleaners | Free Online Formatting Tools">
+    <meta property="og:description" content="Professional online formatting and code cleaning tools for developers, bloggers, and businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://formattingcodecleaners.com">
+    <meta property="og:image" content="https://formattingcodecleaners.com/og-image.jpg">
+    <meta property="og:site_name" content="Formatting & Code Cleaners">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Formatting & Code Cleaners | Free Online Formatting Tools">
+    <meta name="twitter:description" content="Professional online formatting and code cleaning tools for HTML, CSS, JavaScript, JSON and text.">
+    <meta name="twitter:image" content="https://formattingcodecleaners.com/og-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://formattingcodecleaners.com/">
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Formatting & Code Cleaners",
+      "description": "Professional online formatting and code cleaning tools for developers and businesses",
+      "url": "https://formattingcodecleaners.com",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "5000"
+      }
+    }
+    </script>
+    
+    <title>Formatting & Code Cleaners | Free Online Formatting Tools</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-primary: #050816;
+            --bg-secondary: #0B1020;
+            --bg-card: #121826;
+            --accent-primary: #00E5C3;
+            --accent-secondary: #00B8D4;
+            --text-white: #FFFFFF;
+            --text-gray: #B8C2CC;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(5, 8, 22, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 229, 195, 0.1);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 229, 195, 0.1);
+        }
+        
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: scale(1.05);
+        }
+        
+        nav .menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+        
+        nav .menu a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        nav .menu a:hover {
+            color: var(--accent-primary);
+        }
+        
+        nav .menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: var(--transition);
+        }
+        
+        nav .menu a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: var(--bg-primary);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            box-shadow: 0 4px 15px rgba(0, 229, 195, 0.3);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 229, 195, 0.4);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--accent-primary);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+        
+        /* PAGE DISPLAY */
+        .page {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 229, 195, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -200px;
+            right: -200px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0, 184, 212, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -150px;
+            left: -150px;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(20px); }
+        }
+        
+        .hero-content {
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: var(--bg-primary);
+            box-shadow: 0 4px 15px rgba(0, 229, 195, 0.3);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 229, 195, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent-primary);
+            border: 2px solid var(--accent-primary);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(0, 229, 195, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+        
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        
+        .hero-feature::before {
+            content: '✓';
+            color: var(--accent-primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .hero-mockup {
+            margin-top: 3rem;
+            animation: slideUp 0.8s ease-out 0.8s both;
+        }
+        
+        .mockup {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 229, 195, 0.1);
+        }
+        
+        /* FEATURES SECTION */
+        .features {
+            padding: 6rem 0;
+            background: var(--bg-primary);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 12px 40px rgba(0, 229, 195, 0.2);
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-white);
+        }
+        
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* WHY CHOOSE US */
+        .why-choose-us {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .reason-card {
+            background: rgba(0, 229, 195, 0.05);
+            border: 1px solid rgba(0, 229, 195, 0.2);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .reason-card:hover {
+            background: rgba(0, 229, 195, 0.1);
+            transform: translateY(-5px);
+            border-color: var(--accent-primary);
+        }
+        
+        .reason-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent-primary);
+        }
+        
+        .reason-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* STATISTICS SECTION */
+        .stats {
+            padding: 6rem 0;
+            background: var(--bg-primary);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            color: var(--text-gray);
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+        }
+        
+        /* TOOLS PREVIEW */
+        .tools-preview {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-primary);
+            box-shadow: 0 12px 40px rgba(0, 229, 195, 0.2);
+        }
+        
+        .tool-header {
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            padding: 1.5rem;
+            color: var(--bg-primary);
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .tool-content {
+            padding: 2rem;
+        }
+        
+        .tool-io {
+            margin-bottom: 1rem;
+        }
+        
+        .tool-io label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+        }
+        
+        .tool-io textarea {
+            width: 100%;
+            background: rgba(0, 229, 195, 0.05);
+            border: 1px solid rgba(0, 229, 195, 0.2);
+            border-radius: 6px;
+            padding: 0.75rem;
+            color: var(--text-white);
+            font-size: 0.85rem;
+            height: 80px;
+            resize: none;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .tool-io textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(0, 229, 195, 0.1);
+        }
+        
+        .tool-button {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            border-radius: 6px;
+            color: var(--bg-primary);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .tool-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 229, 195, 0.3);
+        }
+        
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--bg-primary);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-card:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 8px 25px rgba(0, 229, 195, 0.15);
+        }
+        
+        .testimonial-quote {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+            font-size: 0.95rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--accent-primary);
+        }
+        
+        .testimonial-role {
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+        
+        .stars {
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        
+        /* FAQ SECTION */
+        .faq {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        
+        .faq-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: var(--transition);
+            backdrop-filter: blur(10px);
+        }
+        
+        .faq-item:hover {
+            border-color: var(--accent-primary);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            transition: var(--transition);
+        }
+        
+        .faq-question:hover {
+            background: rgba(0, 229, 195, 0.05);
+        }
+        
+        .faq-question h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-white);
+        }
+        
+        .faq-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .faq-toggle::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+        }
+        
+        .faq-item.active .faq-toggle::after {
+            content: '−';
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: var(--transition);
+            background: rgba(0, 229, 195, 0.05);
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 1.5rem 1.5rem;
+        }
+        
+        .faq-answer p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* CTA SECTION */
+        .cta-final {
+            padding: 4rem 0;
+            background: var(--bg-primary);
+            text-align: center;
+        }
+        
+        .cta-final h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .cta-final p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid rgba(0, 229, 195, 0.1);
+            padding: 3rem 0 1rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-column h4 {
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-column ul li a {
+            color: var(--text-gray);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-primary);
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(0, 229, 195, 0.1);
+            padding-top: 1.5rem;
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.85rem;
+        }
+        
+        /* ABOUT PAGE */
+        .about {
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+        
+        .about-hero {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+        
+        .about-hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .about-content {
+            padding: 4rem 0;
+        }
+        
+        .about-section {
+            margin-bottom: 3rem;
+        }
+        
+        .about-section h2 {
+            font-size: 1.8rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .about-section p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-item {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 8px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .value-item h3 {
+            color: var(--accent-primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .value-item p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* CONTACT PAGE */
+        .contact {
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+        
+        .contact-container {
+            max-width: 600px;
+            margin: 4rem auto;
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 229, 195, 0.15);
+            border-radius: 12px;
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-container h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .contact-info {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+        
+        .contact-info p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-info a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: var(--text-white);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(0, 229, 195, 0.05);
+            border: 1px solid rgba(0, 229, 195, 0.2);
+            border-radius: 6px;
+            padding: 0.75rem;
+            color: var(--text-white);
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            background: rgba(0, 229, 195, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-error {
+            color: #ff6b6b;
+            font-size: 0.8rem;
+            margin-top: 0.3rem;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            border: none;
+            border-radius: 6px;
+            color: var(--bg-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0, 229, 195, 0.3);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 229, 195, 0.4);
+        }
+        
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+        
+        .form-message {
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        .form-message.success {
+            display: block;
+            background: rgba(0, 229, 195, 0.1);
+            border: 1px solid var(--accent-primary);
+            color: var(--accent-primary);
+        }
+        
+        .form-message.error {
+            display: block;
+            background: rgba(255, 107, 107, 0.1);
+            border: 1px solid #ff6b6b;
+            color: #ff6b6b;
+        }
+        
+        /* PRIVACY PAGE */
+        .privacy {
+            padding-top: 80px;
+            min-height: 100vh;
+        }
+        
+        .privacy-container {
+            max-width: 800px;
+            margin: 4rem auto;
+        }
+        
+        .privacy-container h1 {
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .privacy-section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .privacy-section h2 {
+            font-size: 1.3rem;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        
+        .privacy-section p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+        
+        .privacy-section ul {
+            list-style: none;
+            padding-left: 1.5rem;
+            color: var(--text-gray);
+        }
+        
+        .privacy-section ul li {
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .privacy-section ul li::before {
+            content: '▸';
+            position: absolute;
+            left: -1.5rem;
+            color: var(--accent-primary);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            nav .menu {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 1rem;
+                background: var(--bg-secondary);
+                padding: 2rem;
+                max-height: 0;
+                overflow: hidden;
+                transition: var(--transition);
+            }
+            
+            nav .menu.active {
+                max-height: 500px;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .about-hero h1,
+            .contact-container h1,
+            .privacy-container h1 {
+                font-size: 1.8rem;
+            }
+            
+            .footer-content {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .feature-card,
+            .reason-card,
+            .stat-item,
+            .tool-card,
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            nav .container {
+                padding: 0 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .contact-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="container">
+            <div class="logo" onclick="navigateTo('home')">Formatting & Code Cleaners</div>
+            <ul class="menu" id="menu">
+                <li><a href="#" onclick="navigateTo('home'); return false;">Home</a></li>
+                <li><a href="#" onclick="navigateTo('home'); scrollToTools(); return false;">Tools</a></li>
+                <li><a href="#" onclick="navigateTo('home'); scrollToFeatures(); return false;">Features</a></li>
+                <li><a href="#" onclick="navigateTo('about'); return false;">About Us</a></li>
+                <li><a href="#" onclick="navigateTo('contact'); return false;">Contact Us</a></li>
+                <li><a href="#" onclick="navigateTo('privacy'); return false;">Privacy Policy</a></li>
+                <li><button class="cta-button" onclick="scrollToTop(); navigateTo('home')">Start Cleaning</button></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Format, Clean & Optimize Your Code Instantly</h1>
+                <p>Professional tools for developers, bloggers, students and businesses. Clean messy code, improve readability and boost productivity with one click.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToTools()">Try Free Tools</button>
+                    <button class="btn-secondary" onclick="navigateTo('about')">Learn More</button>
+                </div>
+                <div class="hero-features">
+                    <div class="hero-feature">Fast Processing</div>
+                    <div class="hero-feature">SEO Friendly</div>
+                    <div class="hero-feature">Mobile Responsive</div>
+                    <div class="hero-feature">Free Tools</div>
+                </div>
+                <div class="hero-mockup">
+                    <div class="mockup">
+                        <div style="text-align: center; color: var(--text-gray); padding: 2rem;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">💻</div>
+                            <p>Professional Code Formatting Dashboard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FEATURES SECTION -->
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Powerful Formatting Tools</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>HTML Formatter</h3>
+                        <p>Clean and beautify HTML code instantly with proper indentation and formatting.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>CSS Formatter</h3>
+                        <p>Organize CSS with proper indentation and structure for better readability.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>JavaScript Formatter</h3>
+                        <p>Transform messy JavaScript into readable and structured code automatically.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📋</div>
+                        <h3>JSON Formatter</h3>
+                        <p>Validate and beautify JSON data with proper formatting and structure.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3>Code Minifier</h3>
+                        <p>Reduce file size for faster loading and improved website performance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✨</div>
+                        <h3>Text Cleaner</h3>
+                        <p>Remove extra spaces and formatting issues from any text content.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- WHY CHOOSE US -->
+        <section class="why-choose-us">
+            <div class="container">
+                <h2 class="section-title">Why Developers Love Our Tools</h2>
+                <div class="reasons-grid">
+                    <div class="reason-card">
+                        <h3>⚡ Lightning Fast</h3>
+                        <p>Clean code within seconds with our optimized processing engine.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>🔒 Secure Processing</h3>
+                        <p>No data stored on servers. Your code stays completely private and secure.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>🎯 Modern Interface</h3>
+                        <p>Easy and professional design that's intuitive and powerful.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>📱 Mobile Friendly</h3>
+                        <p>Works perfectly on all devices, phones, tablets, and desktops.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>🚀 SEO Optimized</h3>
+                        <p>Better website performance and ranking with optimized code.</p>
+                    </div>
+                    <div class="reason-card">
+                        <h3>💰 Free Forever</h3>
+                        <p>No registration required. Use all tools completely free forever.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- STATISTICS SECTION -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50000">0</div>
+                        <div class="stat-label">Monthly Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="500000">0</div>
+                        <div class="stat-label">Files Processed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Responsive</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TOOLS PREVIEW SECTION -->
+        <section class="tools-preview" id="tools">
+            <div class="container">
+                <h2 class="section-title">Try Our Tools</h2>
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">HTML Formatter</div>
+                        <div class="tool-content">
+                            <div class="tool-io">
+                                <label>Input</label>
+                                <textarea placeholder="Paste your HTML code here..."></textarea>
+                            </div>
+                            <div class="tool-io">
+                                <label>Output</label>
+                                <textarea placeholder="Formatted HTML will appear here..." readonly></textarea>
+                            </div>
+                            <button class="tool-button">Format HTML</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">CSS Formatter</div>
+                        <div class="tool-content">
+                            <div class="tool-io">
+                                <label>Input</label>
+                                <textarea placeholder="Paste your CSS code here..."></textarea>
+                            </div>
+                            <div class="tool-io">
+                                <label>Output</label>
+                                <textarea placeholder="Formatted CSS will appear here..." readonly></textarea>
+                            </div>
+                            <button class="tool-button">Format CSS</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">JSON Formatter</div>
+                        <div class="tool-content">
+                            <div class="tool-io">
+                                <label>Input</label>
+                                <textarea placeholder="Paste your JSON code here..."></textarea>
+                            </div>
+                            <div class="tool-io">
+                                <label>Output</label>
+                                <textarea placeholder="Formatted JSON will appear here..." readonly></textarea>
+                            </div>
+                            <button class="tool-button">Format JSON</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-header">Text Cleaner</div>
+                        <div class="tool-content">
+                            <div class="tool-io">
+                                <label>Input</label>
+                                <textarea placeholder="Paste your text here..."></textarea>
+                            </div>
+                            <div class="tool-io">
+                                <label>Output</label>
+                                <textarea placeholder="Cleaned text will appear here..." readonly></textarea>
+                            </div>
+                            <button class="tool-button">Clean Text</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- TESTIMONIALS SECTION -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Users Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-quote">"Formatting & Code Cleaners has become an essential part of my workflow. It saves me hours every week!"</p>
+                        <div class="testimonial-author">Sarah Johnson</div>
+                        <div class="testimonial-role">Full Stack Developer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-quote">"Finally, a tool that makes code formatting simple and efficient. Highly recommended!"</p>
+                        <div class="testimonial-author">Michael Chen</div>
+                        <div class="testimonial-role">Software Engineer</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-quote">"The best formatting tool I've ever used. Fast, reliable, and completely free!"</p>
+                        <div class="testimonial-author">Emma Davis</div>
+                        <div class="testimonial-role">Web Developer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ SECTION -->
+        <section class="faq">
+            <div class="container">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>What is a code formatter?</h3>
+                            <div class="faq-toggle"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>A code formatter is a tool that automatically reorganizes and beautifies your code by fixing indentation, spacing, and structure. It makes your code more readable and professional-looking without changing its functionality.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>Are these tools free?</h3>
+                            <div class="faq-toggle"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! All our formatting tools are completely free to use. No hidden charges, no subscriptions, and no premium features. We believe in providing quality tools accessible to everyone.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>Is my code secure?</h3>
+                            <div class="faq-toggle"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! Your code is never stored on our servers. All processing happens directly in your browser using client-side JavaScript. Your data remains completely private and secure at all times.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>Can I use this on mobile?</h3>
+                            <div class="faq-toggle"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes! Our tools are fully responsive and work perfectly on mobile devices, tablets, and desktops. You can format code on the go without any issues.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">
+                            <h3>Do I need an account?</h3>
+                            <div class="faq-toggle"></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>No account needed! You can use all our tools immediately without any registration. Just visit the website and start formatting your code right away.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FINAL CTA SECTION -->
+        <section class="cta-final">
+            <div class="container">
+                <h2>Start Cleaning Your Code Today</h2>
+                <p>Join thousands of users improving productivity every day.</p>
+                <button class="btn-primary" onclick="scrollToTools()">Get Started Free</button>
+            </div>
+        </section>
+    </div>
+    
+    <!-- ABOUT PAGE -->
+    <div id="about" class="page">
+        <div class="about">
+            <section class="about-hero">
+                <div class="container">
+                    <h1>About Formatting & Code Cleaners</h1>
+                    <p class="section-title" style="margin-top: 1rem; font-size: 1.2rem; text-align: center;">Empowering developers and professionals worldwide</p>
+                </div>
+            </section>
+            
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-section">
+                        <h2>Our Mission</h2>
+                        <p>Formatting & Code Cleaners provides professional formatting, cleaning and optimization tools for developers, content creators, bloggers and businesses. Our mission is to simplify workflows and improve productivity through fast, secure and easy-to-use web tools.</p>
+                        <p>We believe that everyone deserves access to professional-grade tools without barriers or costs. That's why our entire platform is free and accessible to all.</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h2>Our Vision</h2>
+                        <p>We envision a world where developers and professionals spend less time on tedious formatting tasks and more time on creative and important work. We're committed to building tools that are not just functional, but truly delightful to use.</p>
+                        <p>Our vision is to become the go-to platform for code formatting and optimization, trusted by millions of users worldwide.</p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h2>Our Values</h2>
+                        <div class="values-grid">
+                            <div class="value-item">
+                                <h3>Simplicity</h3>
+                                <p>We make complex processes simple through intuitive design and powerful automation.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3>Security</h3>
+                                <p>Your data is sacred. We process everything locally in your browser, never storing data on servers.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3>Accessibility</h3>
+                                <p>Free tools for everyone. No subscriptions, no limits, no hidden charges.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3>Innovation</h3>
+                                <p>We continuously improve and add new features based on user feedback and industry standards.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3>Reliability</h3>
+                                <p>99.9% uptime and consistent performance you can count on.</p>
+                            </div>
+                            <div class="value-item">
+                                <h3>Community</h3>
+                                <p>We listen to our users and build features they actually need and want.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h2>Why Choose Us?</h2>
+                        <p><strong>Professional Quality:</strong> Our tools are built with the same standards as enterprise solutions, but accessible to everyone.</p>
+                        <p><strong>Speed & Performance:</strong> Lightning-fast processing that respects your time and bandwidth.</p>
+                        <p><strong>Privacy First:</strong> All processing happens in your browser. Zero data collection.</p>
+                        <p><strong>No Registration:</strong> Start using our tools immediately without creating an account.</p>
+                        <p><strong>Regular Updates:</strong> We continuously add new features and improvements based on user needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="page">
+        <div class="contact">
+            <div class="contact-container">
+                <h1>Get In Touch</h1>
+                <div class="contact-info">
+                    <p>Have questions or feedback? We'd love to hear from you!</p>
+                    <p>Email: <a href="mailto:support@formattingcodecleaners.com">support@formattingcodecleaners.com</a></p>
+                </div>
+                
+                <form id="contactForm" onsubmit="handleContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <div class="form-error" id="nameError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <div class="form-error" id="emailError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <div class="form-error" id="subjectError"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                        <div class="form-error" id="messageError"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PRIVACY POLICY PAGE -->
+    <div id="privacy" class="page">
+        <div class="privacy">
+            <div class="privacy-container">
+                <h1>Privacy Policy</h1>
+                
+                <div class="privacy-section">
+                    <h2>Introduction</h2>
+                    <p>Welcome to Formatting & Code Cleaners. We are committed to protecting your privacy and ensuring you have a positive experience on our website. This Privacy Policy explains how we handle your information when you use our services.</p>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Information Collection</h2>
+                    <p>We prioritize your privacy. Here's what we collect:</p>
+                    <ul>
+                        <li>Code formatting requests are processed entirely in your browser</li>
+                        <li>No code or formatted content is transmitted to our servers</li>
+                        <li>We do not collect personal information unless you voluntarily provide it through contact forms</li>
+                        <li>Basic analytics data to improve our service (anonymized and aggregated)</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Cookies Policy</h2>
+                    <p>Our website uses minimal cookies:</p>
+                    <ul>
+                        <li>Necessary cookies for website functionality</li>
+                        <li>Preference cookies to remember your settings</li>
+                        <li>Analytics cookies to understand user behavior (anonymized)</li>
+                        <li>You can disable cookies in your browser settings at any time</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Analytics Usage</h2>
+                    <p>We use analytics to understand how you use our service and improve it. This includes:</p>
+                    <ul>
+                        <li>Page views and user interactions</li>
+                        <li>Device and browser information</li>
+                        <li>Geographic location (country level only)</li>
+                        <li>All data is anonymized and aggregated</li>
+                        <li>No personal identification possible from analytics data</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Third Party Services</h2>
+                    <p>We may use third-party services for:</p>
+                    <ul>
+                        <li>Analytics (Google Analytics - anonymized)</li>
+                        <li>Hosting and CDN services</li>
+                        <li>Email services for notifications</li>
+                        <li>Each third party follows GDPR and data protection standards</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Data Security</h2>
+                    <p>Security is our top priority:</p>
+                    <ul>
+                        <li>All code processing happens in your browser (client-side)</li>
+                        <li>No data transmission to our servers</li>
+                        <li>HTTPS encryption for all website communication</li>
+                        <li>Regular security audits and updates</li>
+                        <li>Compliance with industry security standards</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Your Rights</h2>
+                    <p>You have the following rights regarding your data:</p>
+                    <ul>
+                        <li>Right to access your data</li>
+                        <li>Right to correct inaccurate data</li>
+                        <li>Right to delete your data</li>
+                        <li>Right to opt-out of analytics</li>
+                        <li>Right to data portability</li>
+                        <li>Right to withdraw consent at any time</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Contact Information</h2>
+                    <p>If you have questions about this Privacy Policy or your data, please contact us:</p>
+                    <ul>
+                        <li>Email: support@formattingcodecleaners.com</li>
+                        <li>Website: formattingcodecleaners.com</li>
+                    </ul>
+                </div>
+                
+                <div class="privacy-section">
+                    <h2>Policy Updates</h2>
+                    <p>We may update this Privacy Policy from time to time. We will notify you of any significant changes by updating the date at the bottom of this page. Your continued use of our service indicates your acceptance of these terms.</p>
+                    <p><strong>Last Updated:</strong> September 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('about'); return false;">About Us</a></li>
+                        <li><a href="#" onclick="navigateTo('contact'); return false;">Contact Us</a></li>
+                        <li><a href="#" onclick="navigateTo('privacy'); return false;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Tools</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('home'); scrollToTools(); return false;">HTML Formatter</a></li>
+                        <li><a href="#" onclick="navigateTo('home'); scrollToTools(); return false;">CSS Formatter</a></li>
+                        <li><a href="#" onclick="navigateTo('home'); scrollToTools(); return false;">JSON Formatter</a></li>
+                        <li><a href="#" onclick="navigateTo('home'); scrollToTools(); return false;">Text Cleaner</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#" onclick="navigateTo('privacy'); return false;">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Formatting & Code Cleaners. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Navigation
+        function navigateTo(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.classList.remove('active'));
+            document.getElementById(page).classList.add('active');
+            scrollToTop();
+            closeMenu();
+        }
+        
+        // Scroll to top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Scroll to features
+        function scrollToFeatures() {
+            const featuresSection = document.getElementById('features');
+            if (featuresSection) {
+                featuresSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Scroll to tools
+        function scrollToTools() {
+            const toolsSection = document.getElementById('tools');
+            if (toolsSection) {
+                toolsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Hamburger Menu
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        
+        hamburger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+        
+        function closeMenu() {
+            menu.classList.remove('active');
+        }
+        
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-count]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-count'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    counter.textContent = Math.floor(current).toLocaleString() + '+';
+                }, 16);
+            });
+        }
+        
+        // Trigger counter animation when visible
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('stats')) {
+                        animateCounters();
+                        observer.unobserve(entry.target);
+                    }
+                }
+            });
+        }, observerOptions);
+        
+        const statsSection = document.querySelector('.stats');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // FAQ Toggle
+        function toggleFAQ(element) {
+            element.classList.toggle('active');
+        }
+        
+        // Contact Form Validation
+        function handleContactForm(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+            
+            let isValid = true;
+            
+            // Clear previous errors
+            document.querySelectorAll('.form-error').forEach(error => error.textContent = '');
+            
+            // Name validation
+            if (!name) {
+                document.getElementById('nameError').textContent = 'Name is required';
+                isValid = false;
+            } else if (name.length < 2) {
+                document.getElementById('nameError').textContent = 'Name must be at least 2 characters';
+                isValid = false;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email) {
+                document.getElementById('emailError').textContent = 'Email is required';
+                isValid = false;
+            } else if (!emailRegex.test(email)) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email';
+                isValid = false;
+            }
+            
+            // Subject validation
+            if (!subject) {
+                document.getElementById('subjectError').textContent = 'Subject is required';
+                isValid = false;
+            } else if (subject.length < 3) {
+                document.getElementById('subjectError').textContent = 'Subject must be at least 3 characters';
+                isValid = false;
+            }
+            
+            // Message validation
+            if (!message) {
+                document.getElementById('messageError').textContent = 'Message is required';
+                isValid = false;
+            } else if (message.length < 10) {
+                document.getElementById('messageError').textContent = 'Message must be at least 10 characters';
+                isValid = false;
+            }
+            
+            // Display result
+            const formMessage = document.getElementById('formMessage');
+            if (isValid) {
+                formMessage.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
+                formMessage.classList.remove('error');
+                formMessage.classList.add('success');
+                document.getElementById('contactForm').reset();
+            } else {
+                formMessage.textContent = '✗ Please fix the errors above';
+                formMessage.classList.remove('success');
+                formMessage.classList.add('error');
+            }
+        }
+        
+        // Tool functions
+        document.addEventListener('DOMContentLoaded', function() {
+            const toolButtons = document.querySelectorAll('.tool-button');
+            
+            toolButtons.forEach((button, index) => {
+                button.addEventListener('click', function() {
+                    const toolCard = this.closest('.tool-card');
+                    const inputs = toolCard.querySelectorAll('textarea');
+                    const input = inputs[0].value;
+                    const output = inputs[1];
+                    
+                    if (!input.trim()) {
+                        output.value = 'Please enter some code to format';
+                        return;
+                    }
+                    
+                    try {
+                        let formatted = '';
+                        
+                        if (index === 0) { // HTML
+                            formatted = formatHTML(input);
+                        } else if (index === 1) { // CSS
+                            formatted = formatCSS(input);
+                        } else if (index === 2) { // JSON
+                            formatted = formatJSON(input);
+                        } else if (index === 3) { // Text
+                            formatted = formatText(input);
+                        }
+                        
+                        output.value = formatted;
+                    } catch (error) {
+                        output.value = 'Error: ' + error.message;
+                    }
+                });
+            });
+        });
+        
+        function formatHTML(html) {
+            let formatted = '';
+            let indent = 0;
+            let lines = html.split(/>\s*</g);
+            
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i];
+                
+                if (i > 0) line = '<' + line;
+                if (i < lines.length - 1) line = line + '>';
+                
+                if (line.includes('</')) indent--;
+                formatted += '  '.repeat(Math.max(0, indent)) + line.trim() + '\n';
+                if (line.includes('</') === false && !line.endsWith('/') && !line.includes('<!')) indent++;
+            }
+            
+            return formatted;
+        }
+        
+        function formatCSS(css) {
+            let formatted = css
+                .replace(/\s*{\s*/g, ' {\n  ')
+                .replace(/;\s*/g, ';\n  ')
+                .replace(/\s*}\s*/g, '\n}\n')
+                .replace(/,\s*/g, ',\n');
+            
+            return formatted;
+        }
+        
+        function formatJSON(json) {
+            const parsed = JSON.parse(json);
+            return JSON.stringify(parsed, null, 2);
+        }
+        
+        function formatText(text) {
+            return text
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+    </script>
+</body>
+</html>
